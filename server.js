@@ -33,7 +33,7 @@ connectDB();
 
 // cors setup
 fastify.register(cors, {
-  origin: "*",
+  origin: ["http://localhost:3002"],
   credentials: true,
 });
 

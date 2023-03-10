@@ -52,11 +52,10 @@ const loginUserOpt = {
   schema: {
     body: {
       type: "object",
-      required: ["email", "password", "role"],
+      required: ["email", "password"],
       properties: {
         email: { type: "string" },
         password: { type: "string" },
-        role: { type: "string" },
       },
     },
     response: {
