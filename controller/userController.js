@@ -58,7 +58,7 @@ const signupUser = async (req, reply) => {
           signed: true,
           httpOnly: true,
           secure: true,
-          maxAge: 3600 * 24,
+          maxAge: 3600 * 24 * 7,
         })
         .status(201)
         .send({
@@ -93,15 +93,13 @@ const loginUser = async (req, reply) => {
           signed: true,
           httpOnly: true,
           secure: true,
-          maxAge: 3600 * 24,
+          maxAge: 3600 * 24 * 7,
         })
         .status(200)
         .send({
           success: true,
           userData,
         });
-
-
     } else {
       reply
         .status(400)

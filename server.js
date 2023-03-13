@@ -45,7 +45,8 @@ fastify.register(require("@fastify/cookie"), {
   hook: "onRequest", // set to false to disable cookie autoparsing or set autoparsing on any of the following hooks: 'onRequest', 'preParsing', 'preHandler', 'preValidation'. default: 'onRequest'
   parseOptions: {}, // options for parsing cookies
 });
-fastify.register(require("./routes/userRoutes"),{prefix:"/user"});
+fastify.register(require("./routes/userRoutes"), { prefix: "/user" });
+fastify.register(require("./routes/foodRoutes"), { prefix: "/food" });
 fastify.get("/", async (request, reply) => {
   return { hello: "world" };
 });
